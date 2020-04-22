@@ -1,0 +1,252 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?3uuju');
+  src:  url('../fonts/icomoon.eot?3uuju#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?3uuju') format('truetype'),
+    url('../fonts/icomoon.woff?3uuju') format('woff'),
+    url('../fonts/icomoon.svg?3uuju#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e901";
+}
+.icon-cog:before {
+  content: "\e994";
+}
+.icon-fire:before {
+  content: "\e9a9";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+body{
+  background: #080F28;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 70px 200px 200px 200px 200px 200px 200px 200px;
+  /* grid-template-rows: 100px; */
+  grid-gap: 10px;
+  position: relative;
+  /* grid-template-areas: "header header header header header header header header"
+                       "left cinema-now cinema-now cinema-now"
+                       "left . . ."
+                       "left critically-acclaimed critically-acclaimed critically-acclaimed"
+                       "left . . ."
+                       "left dont-lose dont-lose dont-lose"
+                       "left . . ."; */
+}
+
+.post-overlay {
+  background: rgba(0, 0, 0, .4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+.header {
+  height: 100px;
+  grid-column: 1/-1;
+  align-items: center;
+}
+.user-name{
+  text-align: end;
+  font-weight: bold;
+}
+.post {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 200px;
+}
+.post:hover .post-overlay{
+  display: flex;
+}
+.post-image{
+  width: 100%;
+  vertical-align: top;
+  display:block;
+  margin: 0;
+}
+.post-image img{
+  border-radius: 10px;
+}
+.post-description{
+  width: 500px;
+  margin: 5px;
+  font-size:smaller;
+  text-align: center;
+  display: contents;
+}
+.movie {
+  cursor: pointer;
+  width: 100%;
+}
+.item {
+  /* background: lightblue; */
+  /* border: 1px solid red; */
+  border-radius: 10px;
+}
+.logo-img {
+  max-height: 70px;
+  border-radius: 10px;
+}
+.place-holder{
+  max-height: 25px;
+  width: 700px;
+  border-radius: 5px;
+}
+.movie-img {
+  width: 100%;
+  vertical-align: top;
+  display:block
+}
+.user-img {
+  /* width: 100%; */
+  max-width: 50px;
+  border-radius: 25px;
+}
+.header{
+  /* grid-area: header; */
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.left{
+  /* grid-area: left; */
+  grid-row:span 6;
+  display: grid;
+  color: white;
+  text-decoration: none;
+}
+.button{
+  text-decoration: none;
+  color: white;
+}
+.cinema-now{
+  /* grid-area: cinema-now; */
+  grid-column: span 7;
+  height: fit-content;
+  font-weight: 700;
+  font-size: 33px;
+}
+.critically-acclaimed{
+  /* grid-area: critically-acclaimed; */
+  grid-column: span 7;
+  height: fit-content;
+  font-weight: 700;
+  font-size: 33px;
+}
+.dont-lose{
+  /* grid-area: dont-lose ; */
+  height: fit-content;
+  font-weight: 700;
+  font-size: 33px;
+  grid-column: 2 / 9;
+}
+.icon {
+  font-size: 2em;
+  width: 1.1em;
+  height: 1.1em;
+  margin: 0 .2em;
+  color: white;
+}
+
+
+.contact {
+  display: flex;
+  /* background-color: #056FFF; */
+  height: 150px;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+
+}
+.social-link{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  margin: 0 10px;
+}
+.social-link.twitter{
+  background-image: url('../images/twitter.svg');
+}
+.social-link.facebook{
+  background-image: url('../images/facebook.svg');
+}
+.social-link.github{
+  background-image: url('../images/github.svg');
+}
+.social-link.instagram{
+  background-image: url('../images/instagram.svg');
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.words-for-me{
+  padding: 0px 15px;
+}
+.designed-for {
+  padding: 0 15px;
+}
+a{
+  color: white;
+}
+.thanks-image {
+  display: inline;
+  border-radius: 10px;
+}
+.container-1 {
+  /* border: 1px solid red; */
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
