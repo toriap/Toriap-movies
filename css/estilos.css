@@ -59,7 +59,9 @@ body{
 }
 .container {
   display: grid;
-  grid-template-columns: 70px 200px 200px 200px 200px 200px 200px 200px;
+  /* grid-template-columns: 70px 200px 200px 200px 200px 200px 200px 200px; */
+  grid-template-columns: 70px 1fr;
+
   /* grid-template-rows: 100px; */
   grid-gap: 10px;
   position: relative;
@@ -71,7 +73,12 @@ body{
                        "left dont-lose dont-lose dont-lose"
                        "left . . ."; */
 }
-
+.container-1{
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, 200px); */
+  grid-gap: 10px;
+}
 .post-overlay {
   background: rgba(0, 0, 0, .4);
   position: absolute;
@@ -85,9 +92,14 @@ body{
   color: white;
   text-align: center;
   width: 100%;
+
+}
+.post:hover .post-overlay{
+  display: flex;
+
 }
 .header {
-  height: 100px;
+  height: 100%;
   grid-column: 1/-1;
   align-items: center;
 }
@@ -99,11 +111,17 @@ body{
   cursor: pointer;
   position: relative;
   display: block;
-  width: 200px;
+  width: 100%;
 }
-.post:hover .post-overlay{
-  display: flex;
+.item-m {
+  /* background: lightblue;
+  border: 1px solid red; */
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
+
 .post-image{
   width: 100%;
   vertical-align: top;
@@ -112,30 +130,32 @@ body{
 }
 .post-image img{
   border-radius: 10px;
+  width: inherit;
 }
 .post-description{
-  width: 500px;
+  /* width: inherit; */
   margin: 5px;
   font-size:smaller;
   text-align: center;
   display: contents;
+  display: block;
 }
 .movie {
   cursor: pointer;
   width: 100%;
 }
 .item {
-  /* background: lightblue; */
-  /* border: 1px solid red; */
+  /* background: lightblue;
+  border: 1px solid red; */
   border-radius: 10px;
 }
 .logo-img {
-  max-height: 70px;
+  max-height: 40px;
   border-radius: 10px;
 }
 .place-holder{
   max-height: 25px;
-  width: 700px;
+  width: fit-content;
   border-radius: 5px;
 }
 .movie-img {
@@ -156,10 +176,11 @@ body{
 
 .left{
   /* grid-area: left; */
-  grid-row:span 6;
+  /* grid-row:2/span 4; */
   display: grid;
   color: white;
   text-decoration: none;
+  height: fit-content;
 }
 .button{
   text-decoration: none;
@@ -184,7 +205,7 @@ body{
   height: fit-content;
   font-weight: 700;
   font-size: 33px;
-  grid-column: 2 / 9;
+  grid-column: span 7;
 }
 .icon {
   font-size: 2em;
@@ -240,7 +261,7 @@ a{
   display: inline;
   border-radius: 10px;
 }
-.container-1 {
+.container-2 {
   /* border: 1px solid red; */
   width: 1000px;
   margin: 0 auto;
@@ -249,4 +270,10 @@ a{
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+}
+@media screen and (max-width:767px){
+  .item-m p{
+    font-weight: 300;
+    margin: 10px;
+  }
 }
